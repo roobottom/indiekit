@@ -1,0 +1,17 @@
+{
+  "name": "roobottom-indiekit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@indiekit/indiekit": "0.1.0-alpha.4",
+    "@indiekit/store-github": "0.1.0-alpha.4",
+    "dotenv": "^8.2.0"
+  }
+}
