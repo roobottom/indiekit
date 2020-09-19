@@ -5,13 +5,14 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "DEBUG=* node index.js"
+    "start": "index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@indiekit/indiekit": "0.1.0-alpha.4",
-    "@indiekit/store-github": "0.1.0-alpha.4",
-    "dotenv": "^8.2.0"
+    "@indiekit/indiekit": "0.1.0-alpha.7",
+    "@indiekit/store-github": "0.1.0-alpha.6",
+    "dotenv": "^8.2.0",
+    "lodash": "^4.17.20"
   }
 }
