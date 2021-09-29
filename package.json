@@ -1,18 +1,25 @@
 {
   "name": "roobottom-indiekit",
   "version": "1.0.0",
-  "description": "",
+  "description": "Indikit service for my personal site",
   "main": "index.js",
-  "type": "module",
   "scripts": {
-    "start": "index.js"
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/roobottom/indiekit.git"
   },
   "author": "",
   "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/roobottom/indiekit/issues"
+  },
+  "homepage": "https://github.com/roobottom/indiekit#readme",
   "dependencies": {
-    "@indiekit/indiekit": "0.1.0-alpha.7",
-    "@indiekit/store-github": "0.1.0-alpha.6",
-    "dotenv": "^8.2.0",
-    "lodash": "^4.17.20"
+    "@indiekit/indiekit": "^0.1.4",
+    "@indiekit/store-github": "^0.1.4",
+    "dotenv": "^10.0.0"
   }
 }
