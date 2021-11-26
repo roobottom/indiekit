@@ -29,21 +29,21 @@ indiekit.set('publication.postTypes', [
     name: 'Photograph',
     post: {
       path: 'source/content/photos/{yyyy}-{MM}-{dd}-{slug}.md',
-      url: 'diary/{yyyy}-{MM}-{dd}-{​slug}'
+      url: 'diary/{yyyy}-{MM}-{dd}-{slug}'
     },
     media: {
-      path: 'source/images/photos/{yyyy}-{MM}-{dd}-{​filename}-{filename}',
+      path: 'source/images/photos/{yyyy}-{MM}-{dd}-{filename}',
     }
   },
   {
     type: 'article',
     name: 'Artile',
     post: {
-      path: 'source/content/articles/{yyyy}-{MM}-{dd}-{​slug}.md',
-      url: 'articles/{yyyy}-{MM}-{dd}-{​slug}'
+      path: 'source/content/articles/{yyyy}-{MM}-{dd}-{slug}.md',
+      url: 'articles/{yyyy}-{MM}-{dd}-{slug}'
     },
     media: {
-      path: 'source/images/articles/{slug}/{​filename}',
+      path: 'source/images/articles/{slug}/{filename}',
     }
   }
 ]);
