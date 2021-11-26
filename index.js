@@ -18,7 +18,7 @@ const github = new GithubStore({
 });
 
 // Application settings
-indiekit.set('application.mongodbUrl', process.env.MONGODB_URL)
+//indiekit.set('application.mongodbUrl', process.env.MONGODB_URL)
 
 // Publication settings
 indiekit.set('publication.locale', 'en-GB');
@@ -28,22 +28,22 @@ indiekit.set('publication.postTypes', [
     type: 'photo',
     name: 'Photograph',
     post: {
-      path: '_source/photos/{yyyy}-{MM}-{dd}-{slug}.md',
+      path: 'source/content/photos/{yyyy}-{MM}-{dd}-{slug}.md',
       url: 'diary/{yyyy}-{MM}-{dd}-{​slug}'
     },
     media: {
-      path: 'images/photos/{yyyy}-{MM}-{dd}-{​filename}',
+      path: 'source/images/photos/{yyyy}-{MM}-{dd}-{​filename}',
     }
   },
   {
     type: 'article',
     name: 'Artile',
     post: {
-      path: '_source/photos/{yyyy}-{MM}-{dd}-{​slug}.md',
-      url: 'diary/{yyyy}-{MM}-{dd}-{​slug}'
+      path: 'source/content/articles/{yyyy}-{MM}-{dd}-{​slug}.md',
+      url: 'articles/{yyyy}-{MM}-{dd}-{​slug}'
     },
     media: {
-      path: 'images/photos/{yyyy}-{MM}-{dd}-{​filename}',
+      path: 'source/images/articles/{slug}/{​filename}',
     }
   }
 ]);
