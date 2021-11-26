@@ -33,6 +33,7 @@ indiekit.set('publication.postTypes', [
     },
     media: {
       path: 'source/images/photos/{yyyy}-{MM}-{dd}-{filename}',
+      url: 'images/photos/{yyyy}-{MM}-{dd}-{filename}'
     }
   },
   {
@@ -44,6 +45,7 @@ indiekit.set('publication.postTypes', [
     },
     media: {
       path: 'source/images/articles/{slug}/{filename}',
+      url: 'images/articles/{slug}/{filename}'
     }
   }
 ]);
