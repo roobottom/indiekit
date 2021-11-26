@@ -32,7 +32,7 @@ indiekit.set('publication.postTypes', [
       url: 'diary/{yyyy}-{MM}-{dd}-{​slug}'
     },
     media: {
-      path: 'source/images/photos/{yyyy}-{MM}-{dd}-{​filename}',
+      path: 'source/images/photos/{yyyy}-{MM}-{dd}-{​filename}-{filename}',
     }
   },
   {
