@@ -1,4 +1,5 @@
-import YAML from 'yaml';
+import YAML from 'yaml'
+import { marked } from 'marked'
 
 /**
  * A specific preset just for my personal site
@@ -138,11 +139,21 @@ export const roobottomPreset = class {
       content = '';
     }
 
+    //custom: extract any markdown `# h1` and use it as the `summary`
+    const walkTokens = token => {
+      if (token.type === 'heading' && token.depth === 1) {
+        properties.summary = token.text
+      }
+    }
+
+    marked.use({ walkTokens })
+    let markdown = marked.parse(content)
+
     properties = {
       date: properties.published,
       ...(properties.name && {title: properties.name}),
-      ...(properties.summary && {excerpt: properties.summary}),
-      ...(properties.category && {tags: properties.category}), //this is custom,`category`->`tags`
+      ...(properties.summary && {summary: properties.summary}), //custom:`except`->`summary`
+      ...(properties.category && {tags: properties.category}), //custom:`category`->`tags`
       ...(properties.start && {start: properties.start}),
       ...(properties.end && {end: properties.end}),
       ...(properties.rsvp && {rsvp: properties.rsvp}),
