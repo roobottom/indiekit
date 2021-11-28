@@ -142,7 +142,7 @@ export const roobottomPreset = class {
       date: properties.published,
       ...(properties.name && {title: properties.name}),
       ...(properties.summary && {excerpt: properties.summary}),
-      ...(properties.category && {category: properties.category}),
+      ...(properties.category && {tags: properties.category}), //this is custom,`category`->`tags`
       ...(properties.start && {start: properties.start}),
       ...(properties.end && {end: properties.end}),
       ...(properties.rsvp && {rsvp: properties.rsvp}),
