@@ -35,7 +35,7 @@ export const roobottomPreset = class {
       type: 'note',
       name: 'Note',
       post: {
-        path: 'source/notes/{yyyy}-{MM}-{dd}-{slug}.md',
+        path: 'source/content/notes/{yyyy}-{MM}-{dd}-{slug}.md',
         url: 'diary/{yyyy}-{MM}-{dd}-{slug}'
       }
     }, {
