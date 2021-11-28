@@ -13,7 +13,7 @@ const roobottomSiteSchema = new roobottomPreset();
 const github = new GithubStore({
   user: 'roobottom', // Your username on GitHub
   repo: 'roobottom-2021', // Repository files will be saved to
-  branch: 'indiekit-test', // Branch to publish to
+  branch: 'main', // Branch to publish to
   token:  process.env.GITHUB_TOKEN// GitHub personal access token
 });
 
