@@ -147,7 +147,10 @@ export const roobottomPreset = class {
     }
 
     marked.use({ walkTokens })
-    let markdown = marked.parse(content)
+    marked.parse(content)
+
+    //custom: now, remove h1 from the content
+    content = content.replace(/^#(\s?)(.*)(\r*)/, "")
 
     properties = {
       date: properties.published,
