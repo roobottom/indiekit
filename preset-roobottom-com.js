@@ -22,59 +22,63 @@ export const roobottomPreset = class {
   get postTypes() {
     return [{
       type: 'article',
-      name: 'Article',
+      name: 'Artile',
       post: {
-        path: '_posts/{yyyy}-{MM}-{dd}-{slug}.md',
-        url: '{yyyy}/{MM}/{dd}/{slug}'
+        path: 'source/content/articles/{yyyy}-{MM}-{dd}-{slug}.md',
+        url: 'articles/{yyyy}-{MM}-{dd}-{slug}'
       },
       media: {
-        path: 'media/{yyyy}/{MM}/{dd}/{filename}'
+        path: 'source/images/articles/{slug}/{filename}',
+        url: 'images/articles/{slug}/{filename}'
       }
     }, {
       type: 'note',
       name: 'Note',
       post: {
-        path: '_notes/{yyyy}-{MM}-{dd}-{slug}.md',
-        url: 'notes/{yyyy}/{MM}/{dd}/{slug}'
+        path: 'source/notes/{yyyy}-{MM}-{dd}-{slug}.md',
+        url: 'diary/{yyyy}-{MM}-{dd}-{slug}'
       }
     }, {
       type: 'photo',
-      name: 'Photo',
+      name: 'Photograph',
       post: {
-        path: '_photos/{yyyy}-{MM}-{dd}-{slug}.md',
-        url: 'photos/{yyyy}/{MM}/{dd}/{slug}'
+        path: 'source/content/photos/{yyyy}-{MM}-{dd}-{slug}.md',
+        url: 'diary/{yyyy}-{MM}-{dd}-{slug}'
       },
       media: {
-        path: 'media/photos/{yyyy}/{MM}/{dd}/{filename}'
+        path: 'source/images/photos/{yyyy}-{MM}-{dd}-{filename}',
+        url: 'images/photos/{yyyy}-{MM}-{dd}-{filename}'
       }
     }, {
       type: 'video',
       name: 'Video',
       post: {
-        path: '_videos/{yyyy}-{MM}-{dd}-{slug}.md',
-        url: 'videos/{yyyy}/{MM}/{dd}/{slug}'
+        path: 'source/videos/{yyyy}-{MM}-{dd}-{slug}.md',
+        url: 'diary/{yyyy}-{MM}-{dd}-{slug}'
       },
       media: {
-        path: 'media/videos/{yyyy}/{MM}/{dd}/{filename}'
+        path: 'images/videos/{yyyy}-{MM}-{dd}-{filename}'
       }
     }, {
       type: 'audio',
       name: 'Audio',
       post: {
-        path: '_audio/{yyyy}-{MM}-{dd}-{slug}.md',
-        url: 'audio/{yyyy}/{MM}/{dd}/{slug}'
+        path: 'source/audio/{yyyy}-{MM}-{dd}-{slug}.md',
+        url: 'diary/{yyyy}-{MM}-{dd}-{slug}'
       },
       media: {
-        path: 'media/audio/{yyyy}/{MM}/{dd}/{filename}'
+        path: 'source/images/audio/{yyyy}-{MM}-{dd}-{filename}'
       }
     }, {
       type: 'bookmark',
       name: 'Bookmark',
       post: {
-        path: '_bookmarks/{yyyy}-{MM}-{dd}-{slug}.md',
-        url: 'bookmarks/{yyyy}/{MM}/{dd}/{slug}'
+        path: 'source/bookmarks/{yyyy}-{MM}-{dd}-{slug}.md',
+        url: 'bookmarks/{yyyy}-{MM}-{dd}-{slug}'
       }
-    }, {
+    }, 
+    //website doesn't currently support any of these end types, so leaving them as defaults for now.
+    {
       type: 'checkin',
       name: 'Checkin',
       post: {

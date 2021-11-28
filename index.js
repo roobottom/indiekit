@@ -17,38 +17,9 @@ const github = new GithubStore({
   token:  process.env.GITHUB_TOKEN// GitHub personal access token
 });
 
-// Application settings
-//indiekit.set('application.mongodbUrl', process.env.MONGODB_URL)
-
 // Publication settings
 indiekit.set('publication.locale', 'en-GB');
 indiekit.set('publication.me', 'https://roobottom.com');
-indiekit.set('publication.postTypes', [
-  {
-    type: 'photo',
-    name: 'Photograph',
-    post: {
-      path: 'source/content/photos/{yyyy}-{MM}-{dd}-{slug}.md',
-      url: 'diary/{yyyy}-{MM}-{dd}-{slug}'
-    },
-    media: {
-      path: 'source/images/photos/{yyyy}-{MM}-{dd}-{filename}',
-      url: 'images/photos/{yyyy}-{MM}-{dd}-{filename}'
-    }
-  },
-  {
-    type: 'article',
-    name: 'Artile',
-    post: {
-      path: 'source/content/articles/{yyyy}-{MM}-{dd}-{slug}.md',
-      url: 'articles/{yyyy}-{MM}-{dd}-{slug}'
-    },
-    media: {
-      path: 'source/images/articles/{slug}/{filename}',
-      url: 'images/articles/{slug}/{filename}'
-    }
-  }
-]);
 indiekit.set('publication.preset', roobottomSiteSchema);
 indiekit.set('publication.store', github);
 indiekit.set('publication.timeZone', 'Europe/London');
