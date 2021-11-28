@@ -1,13 +1,13 @@
 import 'dotenv/config.js';
 import {Indiekit} from '@indiekit/indiekit';
-import {JekyllPreset} from '@indiekit/preset-jekyll';
+import {roobottomPreset} from './preset-roobottom-com.js';
 import {GithubStore} from '@indiekit/store-github';
 
 // Create a new indiekit instance
 const indiekit = new Indiekit();
 
 // Configure publication preset
-const jekyll = new JekyllPreset();
+const roobottomSiteSchema = new roobottomPreset();
 
 // Configure content store
 const github = new GithubStore({
@@ -49,7 +49,7 @@ indiekit.set('publication.postTypes', [
     }
   }
 ]);
-indiekit.set('publication.preset', jekyll);
+indiekit.set('publication.preset', roobottomSiteSchema);
 indiekit.set('publication.store', github);
 indiekit.set('publication.timeZone', 'Europe/London');
 
