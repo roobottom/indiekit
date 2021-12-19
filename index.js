@@ -23,6 +23,7 @@ indiekit.set('publication.me', 'https://roobottom.com');
 indiekit.set('publication.preset', roobottomSiteSchema);
 indiekit.set('publication.store', github);
 indiekit.set('publication.timeZone', 'Europe/London');
+indiekit.set('publication.categories', 'https://roobottom.com/tags/list.json');
 
 // Create a server
 const server = indiekit.server();
