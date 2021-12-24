@@ -37,18 +37,18 @@ export const roobottomPreset = class {
       name: 'Note',
       post: {
         path: 'source/content/notes/{yyyy}-{MM}-{dd}-{slug}.md',
-        url: 'diary/{yyyy}-{MM}-{dd}-{slug}'
+        url: 'notes/{yyyy}-{MM}-{dd}-{slug}'
       }
     }, {
       type: 'photo',
       name: 'Photograph',
       post: {
-        path: 'source/content/photos/{yyyy}-{MM}-{dd}-{slug}.md',
-        url: 'diary/{yyyy}-{MM}-{dd}-{slug}'
+        path: 'source/content/notes/{yyyy}-{MM}-{dd}-{slug}.md',
+        url: 'notes/{yyyy}-{MM}-{dd}-{slug}'
       },
       media: {
-        path: 'source/images/photos/{yyyy}-{MM}-{dd}-{filename}',
-        url: 'images/photos/{yyyy}-{MM}-{dd}-{filename}'
+        path: 'source/images/notes/{yyyy}-{MM}-{dd}-{filename}',
+        url: 'images/notes/{yyyy}-{MM}-{dd}-{filename}'
       }
     }, {
       type: 'video',
